@@ -18,7 +18,7 @@ int main(void)
 
 	if (m == 0)
 	{
-		printf("Last digit of %i is 0 NS IS 0\n", n);
+		printf("Last digit of %i is 0 and is 0\n", n);
 	}
 	else if (m < 6)
 	{
