@@ -1,10 +1,11 @@
 #include "holberton.h"
 
 /**
-*
-*print_alphabet - prints alphabet
-*
-*/
+ *
+ *
+ *print_alphabet - prints alphabet
+ *
+ */
 void print_alphabet(void)
 {
 	char c;
