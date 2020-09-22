@@ -1,14 +1,13 @@
-"holberton.h"
+#include "holberton.h"
 
 /**
- * print_alphabet - writes the character c to stdout
+ * _islower - check for lowercase
  *
- *
+ *Return: 1 or 0
  */
 int _islower(int c)
 {
-	int = 0
-		if (c == 97 && c <= 122)
+		if (c >= 97 && c <= 122)
 		{
 			return (1);
 		}

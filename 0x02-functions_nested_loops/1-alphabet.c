@@ -1,10 +1,10 @@
 #include "holberton.h"
 
 /**
- * print_alphabet - writes the character c to stdout
- *
- *
- */
+*
+*print_alphabet - prints alphabet
+*
+*/
 void print_alphabet(void)
 {
 	char c;
@@ -13,4 +13,4 @@ void print_alphabet(void)
 
 		_putchar(c);
 		_putchar('\n');
-	}
+}
