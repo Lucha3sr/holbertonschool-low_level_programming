@@ -7,7 +7,7 @@
  */
 void print_triangle(int size)
 {
-	int a, b, c, e, h
+	int a, b, c, e, h;
 
 	e = size - 1;
 	h = 1;
@@ -27,9 +27,9 @@ void print_triangle(int size)
 		h++;
 		_putchar ('\n');
 		}
+	}
 	else
 	{
-		_putchar('\n')
+		_putchar('\n');
 			}
-}
 }
