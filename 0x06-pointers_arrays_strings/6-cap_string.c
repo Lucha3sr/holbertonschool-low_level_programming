@@ -14,7 +14,7 @@ char *cap_string(char *s)
 	{
 		if (s[0] >= 97 && s[0] <= 122)
 			s[0] -= 32;
-		for (ii = 0 ii <= 122; ii++)
+		for (ii = 0; ii <= 122; ii++)
 		{
 			if (*(s + i) == signos[ii])
 			{
