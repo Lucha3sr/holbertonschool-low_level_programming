@@ -7,21 +7,19 @@
  */
 char *leet(char *s)
 {
-int i = 0;
+	int i, ii;
+	char letras [] = "aAeEoOtTlL";
+	char num [] = "4433007711";
 
-while (s[i] != '0')
-{
-while (s[i] == 'a' || s[i] == 'A')
-	s[i] = '4';
-while (s[i] == 'e' || s[i] == 'E')
-	s[i] = '3';
-while (s[i] == 'o' || s[i] == 'O')
-	s[i] = '0';
-while (s[i] == 't' || s[i] == 'T')
-	s[i] = '7';
-while (s[i] == 'l' || s[i] == 'L')
-	s[i] = '1';
-i++;
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		for (ii = 0; letras[ii] != '\0'; ii++)
+		{
+			if (letras[ii] == s[i])
+			{
+				s[i] = num[ii]
 }
+		}
+	}
 return (s);
 }
