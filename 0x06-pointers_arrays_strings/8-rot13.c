@@ -5,10 +5,11 @@
  * @s: s
  * Return: Always 0.
  */
+
 char *rot13(char *s)
 {
-	char abc[] "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	char abc2[] "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
+	char abc[]= "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char abc2[]= "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 	int i, ii;
 
 	for (i = 0; s[i] != '\0'; i++)
