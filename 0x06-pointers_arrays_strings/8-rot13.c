@@ -7,21 +7,20 @@
  */
 char *rot13(char *s)
 {
-int i = 0;
+	char abc[] "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char abc2[] "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
+	int i, ii;
 
-while (s[i] != '0')
-{
-while ((s[i] >= 'a' && s[i] <= 'z') ||
-(s[i] >= 'A' && s[i] <= 'Z'))
-{
-if ((s[i] >= 'n' && s[i] <= 'z') ||
-(s[i] >= 'N' && s[i] <= 'Z'))
-s[i] -= 13;
-else
-s[i] += 13;
-i++;
-}
-i++;
-}
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		for (ii = 0; abc[ii] != '\0'; i++)
+		{
+			if (s[i] == abc[ii])
+			{
+				s[i] = abc2[ii];
+				break;
+			}
+		}
+	}
 return (s);
 }
