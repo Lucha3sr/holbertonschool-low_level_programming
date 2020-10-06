@@ -9,9 +9,15 @@
  */
 void print_diagsums(int *a, int size)
 {
-	int i, ii, sum1 = 0, sum2 = size;
+	int i, sum1 = 0, sum2 = 0;
 
-	for (i = 0; i < size; i++)
+	for (i = 0; i < size * size; i += size + 1)
 	{
-		for (ii = 0; ii < size; ii++)
-		{
+		sum1 += a[i];
+	}
+	for (i = size - 1; i < size * size - 1; i += size -1)
+	{
+		sum2 += a[i];
+	}
+	printf("%d, %d\n", sum1, sum2);
+}
