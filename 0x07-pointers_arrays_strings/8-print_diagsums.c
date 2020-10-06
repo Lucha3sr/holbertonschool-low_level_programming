@@ -15,4 +15,3 @@ void print_diagsums(int *a, int size)
 	{
 		for (ii = 0; ii < size; ii++)
 		{
-			printf ("%d", sum1
