@@ -37,4 +37,5 @@ int is_prime_number(int n)
 	else
 	{
 		return (0);
- 
+	}
+}
