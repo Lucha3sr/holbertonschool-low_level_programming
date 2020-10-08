@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * _sqrt_recursion - natural square root of a number
+ * auxfunction - natural square root of a number
  * @n: n
  * @i: multiplo
  * Return: Always 0.
@@ -14,9 +14,9 @@ return (i);
 }
 else if (n > (i * i))
 {
-  return (auxfunction(n, i + 1));
+return (auxfunction(n, i + 1));
 }
- else
+else
 {
 return (-1);
 }
