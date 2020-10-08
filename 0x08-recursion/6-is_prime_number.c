@@ -6,7 +6,7 @@
  * @i: i
  * Return: Always 0.
  */
-#include "holberton.h"
+int functionaux(int n, int i)
 {
 	if (i == n)
 	{
