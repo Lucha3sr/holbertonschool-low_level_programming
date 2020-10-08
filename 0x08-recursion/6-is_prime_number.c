@@ -1,28 +1,23 @@
-#include "holberton.h"
+"holberton.h"
 
 /**
- * prime_aux - prime number.
+ * functionaux - prime number.
  * @n: n
- * @a: a
+ * @i: i
  * Return: Always 0.
  */
-int prime_aux(int n, int a)
-{
-if (n % a == 0 && a != (n / 2))
-{
-return (0);
-}
-else if (a >= (n / 2))
-{
-return (1);
-}
-else
-{
-return (prime_aux(n, a + 1));
-}
-}
-
 #include "holberton.h"
+{
+        if (i == n)
+        {
+                return (1);
+        }
+        if (n % i == 0)
+        {
+                return (0);
+        }
+        return (functionaux(n, i + 1));
+}
 
 /**
  * is_prime_number - prime number.
@@ -31,9 +26,31 @@ return (prime_aux(n, a + 1));
  */
 int is_prime_number(int n)
 {
-if (n <= 1)
-{
-return (0);
+        if (n <= 1)
+        {
+                return (0);
+        }
+        if (functionaux(n, 2) != 0)
+        {
+                return (1);
+        }
+        else
+        {
+                return (0);
+        }
 }
-return (prime_aux(n, 2));
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
