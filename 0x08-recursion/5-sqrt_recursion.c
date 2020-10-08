@@ -3,10 +3,20 @@
 /**
  * _sqrt_recursion - natural square root of a number
  * @n: n
+ * @i: multiplo
  * Return: Always 0.
  */
-int auxfunction(int i)
-
+int auxfunction(int n, int i)
+{
+if (n == (i * i))
+{
+return (i);
+}
+else if (n > (i * i))
+{
+return (-1);
+}
+}
 
 /**
  * _sqrt_recursion - natural square root of a number
@@ -15,14 +25,18 @@ int auxfunction(int i)
  */
 int _sqrt_recursion(int n)
 {
-	int i;
-
-	if (i * i > n)
-	{
-		return (-1);
-	}
-	if (i * i == n)
-	{
-		return (n * _sqrt_recursion(i + 1, n));
-	}
+if (n == 0)
+{
+return (0);
 }
+else if (n == 1)
+{
+return (1);
+}
+else if (n < 0)
+{
+return (-1);
+}
+return (auxfunction(n, 1));
+}
+
