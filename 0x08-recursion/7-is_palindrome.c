@@ -11,7 +11,7 @@ int palindro(char *s, int inicio, int fin)
 {
 	if (inicio < fin && s[inicio] == s[fin])
 	{
-		return (palindro(s, inicio +1, fin -1));
+		return (palindro(s, inicio + 1, fin - 1));
 	}
 	if (inicio >= fin)
 	{
@@ -31,7 +31,7 @@ int _strlen(char *s)
 	{
 		return (0);
 	}
-	return (_strlen(s+ 1) + 1);
+	return (_strlen(s + 1) + 1);
 }
 
 /**
