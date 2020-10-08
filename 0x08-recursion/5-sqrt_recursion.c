@@ -14,6 +14,10 @@ return (i);
 }
 else if (n > (i * i))
 {
+  return (auxfunction(n, i + 1));
+}
+ else
+{
 return (-1);
 }
 }
