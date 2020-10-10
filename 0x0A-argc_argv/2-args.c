@@ -1,4 +1,4 @@
-#include <stdio.h>
+B#include <stdio.h>
 
 /**
  * main - print the name of a program
@@ -14,5 +14,5 @@ int main(int argc, char *argv[])
 	{
 		printf("%s\n", argv[i]);
 	}
-	return(0);
+	return (0);
 }
