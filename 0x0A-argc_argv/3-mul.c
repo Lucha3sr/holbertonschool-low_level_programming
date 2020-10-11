@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
 /**
  * main - print the name of a program
  * @argc: argc
@@ -14,7 +13,7 @@ int main(int argc, char *argv[])
 
 	if (argc < 3)
 	{
-		printf("error\n");
+		printf("Error\n");
 		return (0);
 	}
 	mult = atoi(argv[1]) * atoi(argv[2]);
