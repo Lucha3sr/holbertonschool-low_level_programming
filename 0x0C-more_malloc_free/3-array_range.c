@@ -3,27 +3,26 @@
 
 
 /**
- * arra_range - creates an array of integers
+ * array_range - creates an array of integers
  * @min: the address of memory to print
  * @max: the size of the memory to print
  *
  * Return: Nothing.
  */
 int *array_range(int min, int max)
-
-	int *s, i;
-
-if (min < max)
 {
-	return (NULL);
+	int *p, i;
+
+if (min > max)
+{
+return (NULL);
 }
-s = malloc(max - min + 1 * sizeof(char));
+p = malloc(((max - min) + 1) * sizeof(int));
 if (s == NULL)
 {
-return (NULL)
-while (i <= max - min)
+return (NULL);
+for (i = 0; i <= (max - min); i++)
 {
-s[i] = ;
-i++;
+p[i] = min + i;
 }
-return (s);
+return (p);
