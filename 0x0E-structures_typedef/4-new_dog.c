@@ -1,5 +1,6 @@
 #include <stdlib.h>
-
+#include <stdio.h>
+#include "dog.h"
 /**
  * _strdup - returns a pointer to a new string which is a duplicate of a string
  * @str: str
@@ -28,8 +29,6 @@ char *_strdup(char *str)
 	}
 	return (s);
 }
-#include <stdio.h>
-#include "dog.h"
 
 /**
  * *new_dog - create a new dog .
