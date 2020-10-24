@@ -20,6 +20,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 	if (n == 0)
 	{
+		printf("\n");
 		return;
 	}
 	if (separator == NULL)
@@ -49,4 +50,5 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	{
 		printf("%s\n", va_arg(a_list, char *));
 	}
+	va_end(a_list);
 }
