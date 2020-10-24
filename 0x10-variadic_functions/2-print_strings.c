@@ -48,7 +48,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	}
 	else
 	{
-		printf("%s\n", va_arg(a_list, char *));
+		printf("%s\n", s);
 	}
 	va_end(a_list);
 }
