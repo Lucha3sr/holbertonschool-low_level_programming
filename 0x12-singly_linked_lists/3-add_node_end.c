@@ -1,12 +1,12 @@
 #include "lists.h"
 
 /**
- * add_node - adds a new node at the beginning of a list.
+ * add_node_end - adds a new node at the beginning of a list.
  * @head: head
  * @str: str
  * Return: Always 0.
  */
-list_t *add_node(list_t **head, const char *str)
+list_t *add_node_end(list_t **head, const char *str)
 {
 	int i;
 	list_t *new, *last;
@@ -26,15 +26,7 @@ list_t *add_node(list_t **head, const char *str)
 	}
 	new->str = strdup(str);
 	new->len = i;
-	if (*head == NULL)
-	{
-		*head = new;
-		return (new);
-	}
-	while (last->next != '\0')
-	{
-		last = last->next;
-	}
+	new->next = NULL;
+	*head = new;
 	last->next = new;
-	return (new);
 }
