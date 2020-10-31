@@ -4,7 +4,7 @@
 	%define success 0
 	%define nl 10
 	section .data
-	message db Hello, Holberton, nl
+	message db "Hello, Holberton", nl
 	message_len equ $-message
 	section .text
 	global main
