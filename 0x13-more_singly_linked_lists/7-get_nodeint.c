@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * get_nodeint_at_index - Write a function that returns the node of a listint_t.
+ * get_nodeint_at_index -Returns the node of a listint_t.
  * @head: head
  * @index: index
  * Return: Always 0.
