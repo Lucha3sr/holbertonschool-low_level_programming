@@ -16,20 +16,17 @@ int main(int argc, char **argv)
 	fd1 = open(argv[1], O_RDONLY);
 	leer = read(fd1, buff, 1024);
 	if (fd1 == -1)
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]), exit(98);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+	exit(98);
 	fd2 = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY, 0664);
 	escribir = write(fd2, buff, leer);
 	if (fd2 == -1)
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
-	while (leer == 1024)
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+	exit(99);
+	while (leer > 0)
 	{
 		leer = read(fd1, buff, 1024);
 		escribir = write(fd2, buff, leer);
-		if (escribir != leer)
-		{dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-			close(fd2);
-			exit(99);
-		}
 		if (leer == -1)
 		{dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 			close(fd1);
