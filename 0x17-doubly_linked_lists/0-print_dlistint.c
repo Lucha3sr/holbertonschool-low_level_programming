@@ -3,7 +3,7 @@
 #include "lists.h"
 
 /**
- * dlistint_t - prints all the elements of list.
+ * print_dlistint - prints all the elements of list.
  * @h: h
  * Return: Always 0.
  */

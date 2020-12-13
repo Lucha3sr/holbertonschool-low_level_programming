@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * dlistint_t - returns the number of elements in a linstint.
+ * dlistint_len - returns the number of elements in a linstint.
  * @h: h
  * Return: Always 0.
  */
