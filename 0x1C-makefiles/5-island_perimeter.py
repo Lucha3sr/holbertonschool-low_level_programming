@@ -1,31 +1,19 @@
 #!/usr/bin/python3
 
+""" returns the perimeter of the island described in grid"""
+""" 0 represents a water zone, 1 represents a land zone"""
 
 def island_perimeter(grid):
 
-    d = 0
-    perimeter = 0
-    height = len(grid)
-    length = len(grid[0])
-    for line in grid:
-        c = 0
+    """Grid is completely surrounded by water, and there is one island"""
+    """Grid is rectangular, width and height dont exceed 100"""
 
-        for val in line:
-            if val == 1:
-                surround = 4
-                if c != length - 1:
-                    if grid[d][c + 1] == 1:
-                        surround -= 1
-                        if c != 0:
-                            if grid[d][c - 1] == 1:
-                                surround -= 1
-                                if d != height - 1:
-                                    if grid[d + 1][c] == 1:
-                                        surround -= 1
-                                        if d != 0:
-                                            if grid[d - 1][c] == 1:
-                                                surround -= 1
-                                                perimeter += surround
-                                                c += 1
-                                                d += 1
-        return perimeter
+    perimeter = 0
+    for x in range(len(grid)):
+        for y in range(len(grid[0])):
+            if grid[x][y] == 1:
+                if ((grid[x][y-1] == 0) and (grid[x][y+1] == 0)):
+                    perimeter += 1
+                if ((grid[x-1][y] == 0) or (grid[x+1][y] == 0)):
+                    perimeter += 1
+    return perimeter * 2
